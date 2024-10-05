@@ -1,0 +1,20 @@
+<html>
+  <head><title>认证平台</title></head>
+  <body>
+    <script>
+      var stat = localStorage.getItem("logged");
+      if (stat == "yes") {
+        alert("欢迎回来！");
+        window.location.replace("/sydisk/home.html");
+      }
+      var pwd = prompt("用户名：admin\n输入密码：");
+      if (pwd == "1q2w3er4") {
+        alert("登录成功！\n欢迎您，admin");
+        localStorage.setItem("logged","yes");
+        window.location.replace("/sydisk/home.html");
+      } else {
+        alert("密码不正确！");
+      }
+    </script>
+  </body>
+</html>
