@@ -1,0 +1,25 @@
+<html>
+  <head><title>加载中……</title></head>
+  <body>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+      var stat = localStorage.getItem("logged");
+      if (stat != "yes") {
+        alert("登录过期，请重新登录！");
+        window.location.replace("/sydisk");
+      }
+      function logout() {
+        if (confirm("你确定要退出吗？")) {
+          localStorage.removeItem("stat");
+          alert("退出成功！");
+          window.location.replace("/sydisk");
+        }
+      }
+      document.title = "云盘";
+      <b>欢迎您，admin</b>&emsp;&emsp;<button onclick="logout()">退出</button><br />
+      <a href="/sydisk/resources/qmhome.jpg">QQ音乐主页.jpg</a>
+      <a href="/sydisk/resources/qmatt.jpg">QQ音乐关注列表.jpg</a>
+      <a href="/sydisk/resources/qmlike.jpg">QQ音乐喜欢.jpg</a>
+    </script>
+  </body>
+</html>
